@@ -3,8 +3,8 @@ TexOrigin 0 0 0 False
 SymOrigin 0 0 0 False
 BeginPinList
 EndPinList
-TexElementName ground
+TexElementName rground
 BeginTex
- \draw (#self.texx1#, #self.texy1#) -- (#self.texx1#, #self.texy1#-0.5);
- \draw (#self.texx1#, #self.texy1#-0.6) node[#self.symbol.latexElementName#, xscale=##mirror_xscale_value##, yscale=1, rotate=-90, ##options##] (#self.name#) {};%  (#self.name#)++(0.0,0.0) node {#self.name# #self.value#};
+ \draw (#self.texx1#, #self.texy1#) -- (#self.texx1#, #self.texy1#);
+ \draw (#self.texx1#, #self.texy1#) node[#self.symbol.latexElementName#, xscale=##mirror_xscale_value##, yscale=1, ##options##] (#self.name#) {};%  (#self.name#)++(0.0,0.0) node {#self.name# #self.value#};
 EndTex
