@@ -1,0 +1,9 @@
+Type Node
+TexOrigin 0 0 0 False
+SymOrigin 0 0 0 False
+BeginPinList
+EndPinList
+TexElementName 
+BeginTex
+  \draw[rotate around={##rotate##+90:(#self.texx1#, #self.texy1#)}] (#self.texx1#, #self.texy1#-0.4) node {#self.value#};
+EndTex
