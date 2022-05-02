@@ -5,7 +5,7 @@ BeginPinList
 EndPinList
 TexElementName ground
 BeginTex
- \draw ({#self.texx1#+0.1*sin(##rotate##)}, {#self.texy1#+0.1*cos(##rotate##)}) coordinate(NOEUD);
- \draw[*short, -] (#self.texx1#, #self.texy1#) -- (NOEUD);
+ \draw[rotate around={##rotate##:(#self.texx1#, #self.texy1#)}] (#self.texx1#, #self.texy1#-0.3) coordinate(NOEUD);
+ \draw[*short, -, shorten >= 0.05cm] (#self.texx1#, #self.texy1#) -- (NOEUD);
  \draw (NOEUD) node[#self.symbol.latexElementName#, xscale=##mirror_xscale_value##, yscale=1, rotate=##rotate##-90, ##options##] (#self.name#) {};%  (#self.name#)++(0.0,0.0) node {#self.name# #self.value#};
 EndTex
