@@ -5,5 +5,5 @@ BeginPinList
 EndPinList
 TexElementName 
 BeginTex
-  \draw[rotate around={##rotate##+90:(#self.texx1#, #self.texy1#)}] (#self.texx1#, #self.texy1#-0.4) node {#self.value#};
+  \draw[rotate around={(##rotate##+90)*##mirror_xscale_value##:(#self.texx1#, #self.texy1#)}] (#self.texx1#, #self.texy1#-0.4) node {#self.value#};
 EndTex

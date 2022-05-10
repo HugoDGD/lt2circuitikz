@@ -1,0 +1,17 @@
+Type BLOCK
+TexOrigin 0 0 0 False
+SymOrigin 0 0 0 False
+BeginPinList
+EndPinList
+TexElementName
+BeginTex
+  \draw[rotate around={##rotate##*##mirror_xscale_value##:(#self.texx1#, #self.texy1#)}] (#self.texx1#+0.5, #self.texy1#) coordinate(Center);
+
+  \draw (Center) circle (0.69cm);
+
+  \draw[rotate around={##rotate##*##mirror_xscale_value##:(#self.texx1#, #self.texy1#)}] (#self.texx1#+1.19, #self.texy1#+0.69) coordinate(A);
+  \draw[rotate around={##rotate##*##mirror_xscale_value##:(#self.texx1#, #self.texy1#)}] (#self.texx1#+1.19, #self.texy1#-0.69) coordinate(B);
+  
+  \draw[line width=2pt] (A) -- (B);
+  \draw[rotate around={##rotate##*##mirror_xscale_value##:(#self.texx1#, #self.texy1#)}] (#self.texx1#+1.9, #self.texy1#) node[waves, scale=0.5, xscale=##mirror_xscale_value##] {};
+EndTex

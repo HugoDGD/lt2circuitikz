@@ -6,22 +6,22 @@ EndPinList
 TexElementName op amp
 BeginTex
  %Triangle
- \draw (#self.texx1#-1.1, #self.texy1#+1.6) coordinate(A);
- \draw (#self.texx1#-1.1, #self.texy1#-1.6) coordinate(B);
- \draw (#self.texx1#+1.42, #self.texy1#) coordinate(out);
+ \draw (#self.texx1#-1.1*##mirror_xscale_value##, #self.texy1#+1.6) coordinate(A);
+ \draw (#self.texx1#-1.1*##mirror_xscale_value##, #self.texy1#-1.6) coordinate(B);
+ \draw (#self.texx1#+1.42*##mirror_xscale_value##, #self.texy1#) coordinate(out);
 
  \draw[line width=1pt] (A) -- (B);
  \draw[line width=1pt] (A) -- (out);
  \draw[line width=1pt] (B) -- (out);
 
  %Coordinate of node
- \draw (#self.texx1#-1.1, #self.texy1#+0.5) coordinate(In-) (In-)++(0.3,0) node[xscale=2] {-};
- \draw (#self.texx1#-1.1, #self.texy1#-0.5) coordinate(In+) (In+)++(0.3,0) node {+};
+ \draw (#self.texx1#-1.1*##mirror_xscale_value##, #self.texy1#+0.5) coordinate(In-) (In-)++(0.3*##mirror_xscale_value##,0) node[xscale=2] {-};
+ \draw (#self.texx1#-1.1*##mirror_xscale_value##, #self.texy1#-0.5) coordinate(In+) (In+)++(0.3*##mirror_xscale_value##,0) node {+};
 
- \draw (#self.texx1#-0.59, #self.texy1#-1.285) coordinate(GND) (GND)++(0,+0.3) node[scale=0.7] {G};
+ \draw (#self.texx1#-0.59*##mirror_xscale_value##, #self.texy1#-1.285) coordinate(GND) (GND)++(0,+0.3) node[scale=0.7] {G};
 
- \draw (#self.texx1#-0.09, #self.texy1#+0.95) coordinate(up);
- \draw (#self.texx1#-0.09, #self.texy1#-0.95) coordinate(down);
+ \draw (#self.texx1#-0.09*##mirror_xscale_value##, #self.texy1#+0.95) coordinate(up);
+ \draw (#self.texx1#-0.09*##mirror_xscale_value##, #self.texy1#-0.95) coordinate(down);
 
 %Connect to voltages
 

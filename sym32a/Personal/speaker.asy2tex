@@ -1,0 +1,25 @@
+Type Bipole
+TexOrigin 0 0 0 False
+SymOrigin 0 0 0 False
+BeginPinList
+EndPinList
+TexElementName
+BeginTex
+  \draw (#self.texx1#, #self.texy1#+1) coordinate(A);
+  \draw (#self.texx1#+0.5, #self.texy1#+1) coordinate(B);
+  \draw (#self.texx1#+0.5, #self.texy1#-1) coordinate(C);
+  \draw (#self.texx1#, #self.texy1#-1) coordinate(D);
+
+  \draw[line width=1pt] (A) -- (B) -- (C) -- (D) -- (A);
+
+  \draw (#self.texx1#+0.5, #self.texy1#+0.5) coordinate(up1);
+  \draw (#self.texx1#+0.5, #self.texy1#-0.5) coordinate(down1);
+
+
+  \draw (#self.texx1#+0.8, #self.texy1#+0.9) coordinate(up2);
+  \draw (#self.texx1#+0.8, #self.texy1#-0.9) coordinate(down2);
+
+  \draw[line width=1pt] (up1) -- (up2) -- (down2) -- (down1);
+  
+  \draw (#self.texx1#+1.3, #self.texy1#) node[waves, scale=0.7] {};
+EndTex
